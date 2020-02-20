@@ -1,0 +1,678 @@
+$color1 : #A80E0E;
+$color2 : #FFAA00;
+$color3 : #000000;
+$color4 : #fff;
+$widht : 80%;
+%flex-center {
+    display: flex;
+    align-items: center;
+}
+%bckg{
+    background-position: center;
+    background-size: cover;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.blank{
+    height: 60px;
+}
+body{
+    font-family: 'open sans';
+    min-width: 320px;
+    text-transform: uppercase;
+    
+}
+
+//  H E A D E R
+.header1{
+    width: 100%;
+    background-image: url(../img/1.png);
+    background-position: bottom left;
+    background-size: cover;
+    .menu{
+        padding: 20px 0px;
+        .menu1{
+            display: flex;
+            width: $widht;
+            margin: auto;
+            .menua{
+                width: 50%;
+                @extend %flex-center;
+                input{
+                    background: rgba(0, 0, 0, 0);
+                    border: none;
+                    font-size: 20px;
+                    padding: 10px;
+                    border-bottom: 0.5px solid white;
+                    outline: none;
+                    color: $color4;
+                    text-transform: uppercase;
+                }
+                ::placeholder{
+                    color: white;
+                }
+                img{
+                    height: 30px;
+        margin-right: 10px;
+                }
+            }
+            .menub{
+                width: 50%;
+                @extend %flex-center;
+                justify-content: flex-end;
+                a{
+                    text-decoration: none;
+                    margin-left: 20px;
+                    color: $color4;
+                    font-size: 20px;
+                    transition-duration: 300ms;
+                }
+                a:hover{
+                    // color: bisque;
+                    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+                }
+            }
+        }
+    }
+}
+.header2{
+    @extend %flex-center;
+    justify-content: center;
+    width: $widht;
+    margin: auto;
+    // height: 200px;
+    flex-direction: column;
+    h1{
+        text-align: center;
+        color: $color4;
+        font-size: 40px;
+    }
+    h2{
+        text-align: center;
+        color: $color2;
+        font-size: 60px;
+    }
+    img{
+        width: 400px;
+    }
+}
+.brush{
+    position: relative;
+    bottom: 30px;
+    width: 100%;
+}
+
+// A S I D E
+
+aside{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    #background{
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        position: absolute;
+        display: none;
+    }
+    .titre-aside{
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 40px;
+    }
+    .aside{
+        height: 800px;
+        width: $widht / 1.5;
+        margin: auto;
+        @extend %flex-center;
+        justify-content: center;
+        flex-direction: column;
+        box-shadow: 0px 0px 30px 0 rgba(0, 0, 0, 0.15);
+        border-radius: 20px;
+        .aside1{
+            height: 60%;
+            width: 100%;
+            background-image: url(../img/car1.png);
+            @extend %bckg;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            #fleche1{
+                font-size: 70px;
+                position: absolute;
+                left: 24%;
+                top: 155%;
+                text-decoration: none;
+                color: $color2;
+                text-shadow: 1px 2px 0px $color3;
+            }
+            #fleche2{
+                font-size: 70px;
+                position: absolute;
+                right: 24%;
+                top: 155%;
+                text-decoration: none;
+                color: $color2;
+                text-shadow: -1px 2px 0px $color3;
+            }
+        }
+        .aside2{
+            height: 40%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            .aside4{
+                height: 25%;
+                display: flex;
+                .aside4a{
+                    width: 20%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    a{
+                        font-size: 40px;
+                        text-decoration: none;
+                        color: $color2;
+                        padding: 3px 40px;
+                        transition-duration: 500ms;
+                        border-radius: 10px;
+                        user-select: none;
+                        cursor: pointer;
+                    }
+                }
+                .aside4b{
+                    width: 60%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    h1{
+                        font-size: 40px;
+                    }
+                }
+                .aside4a a:hover{
+                    background-color: $color3;
+                    user-select: none;
+                }
+                .aside4c{
+                    width: 30%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    img{
+                        width: 40px;
+                    }
+                }
+                .aside4d{
+                    width: 70%;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    h1{
+                        font-size: 30px;
+                    }
+                }
+            }
+        }
+    }
+    .reservation-button{
+        width: $widht/1.5;
+        height: 60px;
+        color: $color4;
+        background-color: $color2;
+        border: none;
+        cursor: pointer;
+        font-size: 20px;
+        font-weight: 700;
+        text-transform: uppercase;
+        border-radius: 10px;
+        margin: auto;
+        outline: none;
+    }
+}
+
+// INSCRIPTION-ASIDE
+
+.inscription, .reservation{
+    width: 600px;
+    background-image: url(../img/3.png);
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h1{
+        margin: auto;
+        text-align: center;
+        color: $color4;
+        font-size: 40px;
+    }
+    .input-inscription, .button-inscription{
+        width: 75%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 30px;
+        label{
+            margin-bottom: 10px;
+            font-weight: 500;
+            font-size: 20px;
+            color: white;
+        }
+        input{
+            width: 100%;
+            height: 30px;
+            background-color: rgba(0, 0, 0, 0);
+            border: none;
+            outline: none;
+            font-weight: 500;
+            border-bottom: 1px solid $color4;
+            padding: 2px 10px;
+            font-size: 15px;
+            color: $color4;
+            text-transform: uppercase;
+        }
+        ::placeholder{
+            color: rgba(255, 255, 255, 0.7);
+            font-weight: 100;
+        }
+        select{
+            width: 100%;
+            background-color: transparent;
+            border: none;
+            outline: none;
+            color: $color4;
+            option{
+                color: black;
+            }
+        }
+        #periode-label{
+            font-size: 14px;
+            text-align: center;
+            margin: 5px;
+        }
+    }
+    .button-inscription{
+        button{
+            width: 100%;
+            height: 50px;
+            border: none;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: $color3;
+            border-radius: 10px;
+            font-size: 22px;
+            font-weight: 400;
+            cursor: pointer;
+            outline: none;
+            box-shadow: 0px 0px 2px 2px rgba(255, 255, 255, 0.3);
+            color: $color4;
+            user-select: none;
+        }
+    }
+    .choisir{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        h1{
+            font-size: 40px;
+            text-transform: uppercase;
+        }
+        a{
+            text-decoration: none;
+            color: $color2;
+            background-color: black;
+            padding: 20px 50px;
+            border-radius: 10px;
+            font-size: 20px;
+            font-weight: 500;
+            text-transform: uppercase;
+            text-align: center;
+            cursor: pointer;
+        }
+    }
+}
+
+// RESERVATION-ASIDE
+
+.reservation{
+    width: 800px;
+    background-image: url(../img/3.png);
+    background-position: center;
+    background-size: cover;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h1{
+        color: $color4;
+        font-size: 40px;
+        margin-bottom: 20px;
+    }
+    h2{
+        color: $color4;
+        font-size: 25px;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    .image-reservation{
+        width: 600px;
+        height: 400px;
+        background-image: url(../img/car1.png);
+        background-position: center;
+        background-size: cover;
+        border-radius: 10px;
+        margin-bottom: 20px;
+    }
+    #fleche1{
+        float: left;
+        position: relative;
+    }
+    #fleche2{
+        float: right;
+        position: relative;
+    }
+}
+.popup {
+    width: 80%;
+    // height: 500px;
+    display: flex;
+    border-radius: 20px;
+    padding: 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/4.png);
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    display: none;
+    margin: 130px 0px;
+    .voiture{
+        background-image: url(../img/car1.png);
+        background-position: center;
+        background-size: cover;
+        width: 500px;
+        margin: auto;
+        height: 300px;
+        margin: 20px;
+        border-radius: 20px;
+    }
+    .info{
+        display: flex;
+        flex-direction: column;
+        a{
+            color: $color3;
+            text-align: center;
+            margin: 15px;
+            padding: 10px 0px;
+            background-color:$color2;
+            border-radius: 10px;
+            cursor: pointer;
+            outline: none;
+            font-weight: 700;
+            font-size: 20px;
+            user-select: none;
+            text-decoration: none;
+        }
+    }
+    h1{
+        text-align: center;
+        display: inline-flex;
+        color: white;
+        p{
+            padding: 0px 10px;
+            color: $color2;
+            
+        }
+
+    }
+}
+
+// F O O T E R
+
+footer{
+    background-image: url(../img/2.png);
+    background-position: top left;
+    background-size: cover;
+    .footer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        h1{
+            color: $color4;
+            margin-bottom: 20px;
+        }
+        .footer-icn{
+            display: flex;
+            flex-wrap: wrap;
+            .rs{
+                height: 50px;
+                margin: 10px;
+            }
+        }
+    }
+}
+@media (max-width : 1200px){
+    .header1 .menu .menu1 .menua input{
+        font-size: 17px;
+    }
+    .header1 .menu .menu1 .menub a{
+        font-size: 17px;
+    }
+    .header1 .menu .menu1 .menua img{
+        height: 26px;
+    }
+    .header2 h1{
+        font-size: 30px;
+    }
+    .header2 h2{
+        font-size: 50px;
+    }
+    .blank {
+        height: 50px;
+    }
+    aside .aside, aside .reservation-button{
+        width: $widht/1.2;
+    }
+    aside .titre-aside{
+        font-size: 36px;
+    }
+}
+@media (max-width : 1000px){
+    .header1 .menu .menu1{
+        flex-direction: column;
+        align-items: center;
+    }
+    .header2 h1{
+        font-size: 26px;
+    }
+    .header1 .menu .menu1 .menua,.header1 .menu .menu1 .menub{
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    .blank {
+        height: 30px;
+    }
+    .header1 .menu .menu1 .menua input{
+        width: 80%;
+    }
+    .header1 .menu .menu1 .menub a{
+        margin: 0px 20px;
+    }
+    aside .aside, aside .reservation-button{
+        width: $widht;
+    }
+    .reservation, .popup{
+        width: 85%;
+    }
+}
+@media (max-width : 800px){
+    .header2 h1{
+        font-size: 20px;
+    }
+    .blank {
+        height: 20px;
+    }
+    aside .titre-aside {
+        font-size: 29px;
+    }
+    aside .aside{
+        height: 600px;
+    }
+    aside .aside .aside2 .aside4 .aside4c img {
+        width: 30px;
+    }
+    aside .aside .aside2 .aside4 .aside4d h1 {
+        font-size: 20px;
+    }
+    aside .aside .aside2 .aside4 .aside4b h1 {
+        font-size: 30px;
+    }
+    aside .aside .aside2 .aside4 .aside4a a{
+        font-size: 30px;
+        padding: 0px 20px;
+    }
+    .header2 img {
+        width: 300px;
+    }
+    .header2 h2 {
+        font-size: 40px;
+    }
+    .inscription , .reservation{
+        width: 85%;
+    }
+    .reservation .image-reservation, .popup .voiture{
+        width: 100%;
+    }
+    .reservation .choisir h1{
+        font-size: 30px;
+    }
+    .popup h1{
+        font-size: 18px;
+    }
+}
+@media (max-width : 600px){
+    .header1 .menu .menu1 .menub a{
+        font-size: 14px;
+        margin: 0px 10px;
+    }
+    .header1 .menu .menu1 .menua, .header1 .menu .menu1 .menub{
+        margin-bottom: 15px;
+    }
+    aside .aside .aside2 #prmtr{
+        flex-direction: column;
+    }
+    aside .aside .aside2 .aside4 .aside4c, aside .aside .aside2 .aside4 .aside4d{
+        width: 100%;
+        justify-content: center;
+    }
+    aside .aside .aside2 .aside4 .aside4b h1 {
+        font-size: 25px;
+    }
+    aside .aside .aside2{
+        height: 60%;
+    }
+    aside .aside .aside1{
+        height: 40%;
+    }
+    footer .footer .footer-icn{
+        width: 90%;
+    justify-content: center;
+    }
+    .header1 .menu .menu1 .menub a {
+        font-size: 12px;
+        margin: 0px 7px;
+    }
+    aside .aside .aside2 .aside4 .aside4b h1 {
+        font-size: 22px;
+    }
+    aside .aside .aside2 .aside4 .aside4d h1 {
+        font-size: 17px;
+    }
+    aside .aside .aside2 .aside4 .aside4a a{
+        font-size: 20px;
+        padding: 0px 10px;
+    }
+    .header2 img {
+        width: 270px;
+    }
+    .header2 h2 {
+        font-size: 34px;
+    }
+    aside .aside {
+        height: 450px;
+    }
+    footer .footer .footer-icn .rs {
+        height: 30px;
+        margin: 5px;
+    }
+    footer .footer h1{
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    footer .footer .footer-icn .rs {
+        height: 40px;
+        margin: 5px;
+    }
+    aside .titre-aside {
+        font-size: 25px;
+    }
+    .inscription , .reservation, .popup{
+        width: 85%;
+        border-radius: 20px;
+        padding: 10px;
+    }
+    .inscription h1{
+        font-size: 30px;
+    }
+    .inscription .input-inscription label, .inscription .button-inscription label{
+        font-size: 16px;
+    }
+    .inscription .button-inscription button{
+        font-size: 18px;
+        height: 40px;
+    }
+    .reservation .image-reservation, .popup .voiture{
+        height: 300px;
+    }
+    .reservation h1{
+        font-size: 30px;
+    }
+    .reservation h2{
+        font-size: 20px;
+    }
+    .popup h1{
+        font-size: 14px;
+    }
+}
+@media (max-width : 400px){
+    .reservation .image-reservation,.popup .voiture {
+        height: 230px;
+    }
+    .reservation h1{
+        font-size: 24px;
+    }
+    .reservation .input-inscription label{
+        font-size: 14px;
+    }
+    aside .aside .aside2 .aside4 .aside4d h1{
+        font-size: 15px;
+    }
+    .reservation .input-inscription{
+        width: 90%;
+    }
+    .popup h1{
+        font-size: 11px;
+    }
+}

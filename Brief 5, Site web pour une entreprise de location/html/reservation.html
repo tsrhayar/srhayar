@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>YouCar | RESERVATION</title>
+</head>
+<body onload="afficherCar()">
+    <header>
+        <div class="header1">
+            <div class="menu">
+                <div class="menu1">
+                    <div class="menua">
+                        <img src="../img/icn1.svg" alt="">
+                        <input type="text" placeholder="chercher ...">
+                    </div>
+                    <div class="menub">
+                        <a href="../index.html">GALERIE</a>
+                        <a href="../html/inscription.html">INSCRIPTION</a>
+                        <a href="#">RESERVATION</a>
+                    </div>
+                </div>
+            </div>
+            <div class="blank"></div>
+            <div class="header2">
+                <img src="../img/logo1.svg" alt="">
+                <div class="blank"></div>
+                <h1>RÉSERVEZ MAINTENANT POUR OBTENIR JUSQU’À</h1>
+                <h2>20% DE REMISE</h2>
+                <h1>AVEC NOTRE OFFRE DE LA NOUVELLE ANNÉE</h1>
+                <div class="blank"></div>
+                <div class="blank"></div>
+            </div>
+        </div>
+    </header>
+    <div class="blank"></div>
+    <!-- A S I D E -->
+    <aside>
+        <div class="reservation">
+            <div class="blank"></div>
+
+            <h1>|| RESERVATION ||</h1>
+            <h2>voilà la voiture que vous avez choisis</h2>
+
+            <div class="image-reservation">
+            </div>
+            <div class="input-inscription">
+                <label for="username">Votre nom et prénom</label>
+                <input type="text" placeholder="écrire votre nom et prénom" name="namee" id="name">
+            </div>
+            <div class="input-inscription">
+                <label for="username">Votre année de naissance</label>
+                <input type="date" max="2001-12-31" placeholder="écrire votre année de naissance" name="naissance" id="naissance">
+            </div>
+            <div class="input-inscription">
+                <label for="username">Période de location</label>
+                <label for="periode1" id="periode-label">DATE DE départ</p></label>
+                <input type="date" placeholder="écrire nombre des jours de location" name="periode1" id="date1" min="2020-02-18">
+                <label for="periode2" id="periode-label">DATE DE retour</label>
+                <input type="date" placeholder="écrire nombre des jours de location" name="periode2" id="date2">
+            </div>
+            <div class="input-inscription">
+                <label for="username">Nombre des personnes</label>
+                <select id="pet-select">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                </select>
+            </div>
+            <div class="button-inscription">
+                <button type="submit" id="valider" onclick="valider()">VALIDER</button>
+            </div>
+            <div class="blank"></div>
+        </div>
+
+        <div class="popup" id="popup-id">
+            <h1>VOILÀ LA VOITURE QUE VOUS AVEZ CHOISIS</h1>
+            <div class="voiture"></div>
+            <div class="info">
+                <h1>votre nom est <p id="popup-name"></p></h1>
+                <h1>votre age est <p id="popup-age"></p> ans</h1>
+                <h1>la periode de location est <p id="popup-periode"></p> jour(s)</h1>
+                <h1>nombre des personnes est <p id="popup-personne"></p> personne(s)</h1>
+                <a onclick="valider()">modifier</a>
+                <a onclick="valider()" href="../html/confirmation.html">valider la commande</a>
+            </div>
+        </div>
+    </aside>
+    <div class="blank"></div>
+    <!-- F O O T E R -->
+    <footer>
+        <div class="blank"></div>
+        <div class="footer">
+            <h1>SUIVEZ NOUS</h1>
+            <div class="footer-icn">
+                <img src="../img/facebook.svg" alt="" class="rs">
+                <img src="../img/instagram.svg" alt="" class="rs">
+                <img src="../img/whatsapp.svg" alt="" class="rs">
+                <img src="../img/messenger.svg" alt="" class="rs">
+                <img src="../img/twitter.svg" alt="" class="rs">
+            </div>
+        </div>
+        <div class="blank"></div>
+    </footer>
+    <script src="../js/script.js"></script>
+</body>
+
+</html>
