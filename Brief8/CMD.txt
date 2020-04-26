@@ -1,0 +1,67 @@
+C:\xampp\mysql\bin
+λ mysql -u root
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 2220
+Server version: 10.4.11-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> CREATE DATABASE location;
+Query OK, 1 row affected (0.003 sec)
+
+MariaDB [(none)]> use location;
+Database changed
+MariaDB [location]> CREATE TABLE Client(
+    -> id                   int not null,
+    -> nom_et_prenom        varchar(254),
+    -> email                varchar(254),
+    -> primary key (id)
+    -> );
+Query OK, 0 rows affected (0.047 sec)
+
+MariaDB [location]> CREATE TABLE Reservation(
+    -> id                   int not null,
+    -> Cli_id               int not null,
+    -> date_d_epart         datetime,
+    -> date_d_arrivee       datetime,
+    -> primary key (id)
+    -> );
+Query OK, 0 rows affected (0.043 sec)
+
+MariaDB [location]> CREATE TABLE Voiture(
+    -> id                   int not null,
+    -> Res_id               int not null,
+    -> nom                  varchar(254),
+    -> climatisation        bool,
+    -> carburants           varchar(254),
+    -> prix                 float,
+    -> primary key (id)
+    -> );
+Query OK, 0 rows affected (0.039 sec)
+
+MariaDB [location]> SHOW DATABASES;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| location           |
+| mysql              |
+| performance_schema |
+| phpmyadmin         |
++--------------------+
+5 rows in set (0.001 sec)
+
+MariaDB [location]> SHOW TABLE Client;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'Client' at line 1
+MariaDB [location]> SHOW TABLE status;
++-------------+--------+---------+------------+------+----------------+-------------+-----------------+--------------+-----------+----------------+---------------------+-------------+------------+--------------------+----------+----------------+---------+------------------+-----------+
+| Name        | Engine | Version | Row_format | Rows | Avg_row_length | Data_length | Max_data_length | Index_length | Data_free | Auto_increment | Create_time         | Update_time | Check_time | Collation
+     | Checksum | Create_options | Comment | Max_index_length | Temporary |
++-------------+--------+---------+------------+------+----------------+-------------+-----------------+--------------+-----------+----------------+---------------------+-------------+------------+--------------------+----------+----------------+---------+------------------+-----------+
+| client      | InnoDB |      10 | Dynamic    |    0 |              0 |       16384 |               0 |            0 |         0 |           NULL | 2020-04-26 09:06:51 | NULL        | NULL       | utf8mb4_general_ci |     NULL |                |         |                0 | N         |
+| reservation | InnoDB |      10 | Dynamic    |    0 |              0 |       16384 |               0 |            0 |         0 |           NULL | 2020-04-26 09:07:54 | NULL        | NULL       | utf8mb4_general_ci |     NULL |                |         |                0 | N         |
+| voiture     | InnoDB |      10 | Dynamic    |    0 |              0 |       16384 |               0 |            0 |         0 |           NULL | 2020-04-26 09:10:06 | NULL        | NULL       | utf8mb4_general_ci |     NULL |                |         |                0 | N         |
++-------------+--------+---------+------------+------+----------------+-------------+-----------------+--------------+-----------+----------------+---------------------+-------------+------------+--------------------+----------+----------------+---------+------------------+-----------+
+3 rows in set (0.002 sec)
