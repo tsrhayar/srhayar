@@ -65,3 +65,18 @@ MariaDB [location]> SHOW TABLE status;
 | voiture     | InnoDB |      10 | Dynamic    |    0 |              0 |       16384 |               0 |            0 |         0 |           NULL | 2020-04-26 09:10:06 | NULL        | NULL       | utf8mb4_general_ci |     NULL |                |         |                0 | N         |
 +-------------+--------+---------+------------+------+----------------+-------------+-----------------+--------------+-----------+----------------+---------------------+-------------+------------+--------------------+----------+----------------+---------+------------------+-----------+
 3 rows in set (0.002 sec)
+
+MariaDB [location]> CREATE TABLE test (
+    -> id int(11),
+    -> name varchar(255),
+    -> email varchar(255)
+    -> );
+Query OK, 0 rows affected (0.485 sec)
+
+MariaDB [location]> RENAME TABLE test TO test2;
+Query OK, 0 rows affected (0.094 sec)
+
+MariaDB [location]> DROP TABLE IF EXISTS test2;
+Query OK, 0 rows affected (0.043 sec)
+
+MariaDB [location]>
